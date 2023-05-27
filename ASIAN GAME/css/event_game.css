@@ -1,0 +1,480 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2023-05-13 13:42:26
+ * @version $Id$
+ */
+
+/*设置基础*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: black;
+ 
+}
+
+a {
+	color: black;
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: #purple;
+}
+
+a:hover {
+	color: #3E4ECA;
+}
+
+a:active {
+	color: #purple;
+}
+
+
+
+.main {
+	margin: 100px auto;
+	width: 80%;
+}
+
+/*导航栏*/
+.topnav {
+	position: fixed;
+	z-index: 100;
+	top:0;
+	width: 100%;
+	height: 84px;
+	font-size: 24px;
+	background-color: white;
+	transition: top 0.3s ease-in-out;
+}
+
+
+.asian_icon {
+	height: 70px;
+	padding: 0;
+}
+
+.topnav-item {
+	color: grey;
+	transition: border-radius 2s,
+	background-color 1s;
+	cursor: pointer;
+	
+}
+
+.topnav-item:hover {
+	color: white;
+	border-radius: 20px;
+	background-color: #3E4ECA;
+}
+
+.topnav-item a {
+	color: grey ;
+}
+
+.topnav-item a:hover {
+	color: white ;
+}
+
+.topnav input[type="text"] {
+  border: 2px solid #ddd;
+  color:grey;
+  height: 40px;
+  width: 200px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+/*banner*/
+.banner1_img {
+	margin-top: 20px;
+	width: 100%;
+}
+
+.event_tle {
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	margin: 40px auto;
+	color: white;
+	font-size: 48px;
+	width: 600px;
+	border-radius: 50px;
+	background-color: #2C68DB;
+}
+
+/*赛事介绍*/
+
+.event_intro {
+	display: flex;
+	justify-content: space-between;
+	height: 450px;
+	border-radius: 20px;
+	color: #263F3A;
+	background-color: #F4E1CA;
+}
+
+
+.intro_cnt {
+	display: flex;
+}
+
+.intro_cnt img {
+	width: 250px;
+	height: 350px;
+	border-radius: 10px;
+
+}
+
+.intro_lt {
+	padding: 0 30px;
+	flex: 1;
+}
+
+.intro_lt h1 {
+	color: #2677F0;
+}
+
+
+.intro_txt {
+	line-height: 30px;
+	word-wrap: break-word;
+	padding-left: 20px;
+	font-size: 16px;
+}
+
+.intro_more a {
+	font-size: 16px;
+	color: #5F90ED;
+	float: right;
+}
+
+
+.intro_rt {
+	flex: 1;
+}
+
+.intro_rt h1 {
+	color: #2677F0;
+}
+
+/*设置是wiper参数*/
+
+.swiper-event-box {
+	height: 360px;
+	width: 600px;
+	overflow: hidden;
+}
+
+.swiper-slide img {
+	margin:10px 10px;
+	width: 100px;
+	height: 150px;
+	border-radius: 5px;
+}
+
+.event_select {
+	display: flex;
+}
+
+.swiper-container {
+	position: relative;
+}
+
+#swiper-slide-event-box {
+	margin-left: 40px;
+}
+
+#swiper-event-prev {
+	position: absolute;
+	left: 5px;
+	top: 170px;
+}
+
+#swiper-event-next {
+	position: absolute;
+	left: 530px;
+	top: 170px;
+}
+
+#pagination-event-top {
+	position: absolute;
+	top: 340px;
+}
+
+/*项目奖牌*/
+.event_medal {
+	display: flex;
+	height: 400px;
+	margin-top: 60px;
+	padding: 0 30px;
+	background-color: #F4E1CA;
+	border-radius: 10px;
+}
+
+/*项目奖牌榜*/
+
+.event_total_medal {
+	flex: 1;
+}
+
+.total_medal-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.total_medal_tle {
+	color: #2677F0;
+	flex: 1;
+}
+
+.event_total_medal input {
+	padding: 0px 20px;
+	font-size: 20px;
+}
+
+#countryname {
+	flex: 1;
+	height: 40px;
+	
+	border-radius: 20px;
+}
+
+.total_medal_schedule {
+	height: 300px;
+	background-color: white;
+	border: 4px solid #2677F0;
+}
+
+.event_total_medal thead {
+	height: 60px;
+	font-size: 24px;
+	border-radius: 10px;
+	background-color: #2677F0;
+}
+
+.scrollbar1 {
+	height: 232px;
+	overflow-y: scroll;
+	background-color: #F4E1CA;
+}
+
+.scrollbar1 tr {
+	text-align: center;
+	font-size: 16px;
+	height: 60px;
+	background-color: #F4E1CA;
+}
+
+.scrollbar1 th {
+	border-right: 1px solid #E1A46B;
+	border-top: 1px solid #E1A46B;
+	border-bottom: 1px solid #E1A46B;
+}
+
+.scrollbar1 tr:last-child {
+	border-bottom: 1px solid #E1A46B;
+}
+
+
+
+
+
+
+/*项目赛程奖牌详情*/
+.event_detail_medal {
+	flex: 1;
+	margin-left: 20px;
+}
+
+.detail_medal-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.detail_medal_tle {
+	color: #2677F0;
+	flex: 1;
+}
+
+.event_detail_medal input {
+	padding: 0px 20px;
+	font-size: 20px;
+}
+
+
+#eventname {
+	flex: 1;
+	height: 40px;
+	border-radius: 20px;
+}
+
+
+.event_detail_medal h1 {
+	color: #2677F0;
+}
+
+.event_detail_medal thead {
+	height: 60px;
+	font-size: 24px;
+	border-radius: 10px;
+	background-color: #2677F0;
+}
+
+/*swiper播放日期*/
+.swiper-event-schedule {
+	width: 1170px;
+	overflow: hidden;
+}
+
+#swiper-event-bottom {
+	position: relative;
+
+}
+
+#swiper-schedule-prev {
+	position: absolute;
+	left: -5px;
+	top:40px;
+	color: #E1A46B;
+}
+
+#swiper-schedule-next {
+	position: absolute;
+	left: 1140px;
+	top:40px;
+	color: #E1A46B;
+}
+
+
+
+
+/*项目赛程*/
+.event_schedule_and_medal {
+	display: flex;
+	margin-top: 60px;
+	height: 1000px;
+}
+
+.event_schedule {
+	flex: 2;
+	padding: 0 30px;
+	border-radius: 20px;
+	background-color: #F4E1CA;
+}
+
+.event_schedule-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.event_schedule_tle {
+	color: #2677F0;
+	flex: 1;
+}
+
+.event_schedule input {
+	padding: 0px 20px;
+	font-size: 20px;
+}
+
+
+#schedule_eventname {
+	flex: 1;
+	height: 40px;
+	border-radius: 20px;
+}
+
+
+.event_schedule h1 {
+	color: #2677F0;
+
+}
+
+.event_schedule_table {
+	margin-top: 40px;
+	height: 860px;
+	border-radius: 10px;
+	border: 4px solid #2677F0;
+	background-color: white;
+
+}
+
+.date {
+	display: flex;
+	color: #E1A46B;
+	height: 80px;
+	background-color: #2677F0;
+	border-radius: 10px 10px 0 0;
+}
+
+.date li {
+	font-size: 18px;
+	text-align: center;
+	flex: 1;
+	cursor: pointer;
+}
+
+.date li:hover {
+	color: white;
+}
+
+thead {
+	text-align: center;
+	height: 60px;
+	color: white;
+	font-size: 20px;
+	background-color: #E1A46B;
+}
+
+thead th {
+	border-right: 1px solid white;
+}
+
+#event_list tr {
+	height: 80px;
+	text-align: center;
+	background-color: #F4E1CA;
+	
+}
+
+#event_list tr:last-child {
+	border-bottom: 1px solid #E1A46B;
+}
+
+#event_list tr td {
+	border-right: 1px solid #E1A46B;
+	border-top: 1px solid #E1A46B;
+	border-bottom: 1px solid #E1A46B;
+}
+
+.scrollbar_schedule {
+	height: 712px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: #F4E1CA;
+	
+	
+}
+/*滚动条样式*/
+::-webkit-scrollbar {
+  background-color: #F3E1C9;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2677F0;
+  border-radius: 10px;
+}
+
+

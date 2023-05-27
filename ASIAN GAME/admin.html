@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>亚运信息管理系统</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<!-- 屏幕适配 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- 引入resetcss -->
+		<link rel="stylesheet" href="css/common/Normalize.css">
+		<!-- 引入页面css -->
+		<link href="css/admin.css" rel="stylesheet">
+		<!-- 引入swiper轮播图 -->
+		<!-- <link rel="stylesheet" href="css/common/swiper9.3.min.css" />
+		<script src="src/js/common/swiper9.3.min.js"></script>
+		<link rel="stylesheet" href="css/common/swiper.css"> -->
+		<!-- 引入jQuery -->
+		<script type="text/javascript" src="src/js/common/jquery3.6.min.js"></script>
+		<!-- 引用 jQuery UI 样式 -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+		<!-- 引用 jQuery UI JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<!-- 引入界面js -->
+		<script src="src/js/admin.js"></script>
+		<!-- 引入bootstrap -->
+		<link href="css/common/bootstrap5.3.min.css"rel="stylesheet"/>
+		<link href="css/common/bootstrap5.3.docs.css" rel="stylesheet"/>
+		<!-- 引用 Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+		
+		<!-- 头部导航 -->
+		<div class="topnav">
+			<div class="topnav-icon">
+				<img src="img/head_logo.png" alt="">
+			</div>
+			<div class="topnav-tle">亚运信息管理系统</div>
+			<p class="topnav-hello">你好，管理员！</p>
+			<a href="index.html" class="exit">
+				<p class="top_exit" >退出</p>
+			</a>
+		</div>
+		<!-- 二级导航 -->
+		<div class="midnav main">
+			<div class="midnav_btn adv_manage active">广告管理</div>
+			<div class="midnav_btn athlete_manage active">运动员管理</div>
+			<div class="midnav_btn event_manage active">赛事管理</div>
+			<div class="midnav_btn schedule_manage active">赛程管理</div>
+		</div>
+		
+		<!-- 广告管理表格 -->
+		<div class="managebox main ad-manage">
+			<img src="img/admin/admin-bg.png" alt="" id="bg_img">
+			<div class="managebox-top">
+				<div class="topbtn addbtn ad-addbtn">
+					<img src="img/admin/addbtn.svg" alt="" id="btnicon addbtn_icon">
+					<p>新增广告</p>
+				</div>
+				<div class="topbtn delbtn ad-delbtn">
+					<img src="img/admin/delbtn.svg" alt="" id="btnicon delbtn_icon">
+					<p>删除广告</p>
+				</div>
+			</div>
+			<!-- 删除询问模态框 -->
+			<div id="delete-confirm-dialog" title="确认删除？">
+				<p>这将删除所有勾选数据！</p>
+			</div>
+			
+			<!-- 表头 -->
+			<table id="manage_table_head">
+				<tr>
+					<th width="40">
+						<input type="checkbox" class="charge_head select-all" id=" ad-select-all" name="agree" value="true">
+					</th>
+					<th width="150">序号</th>
+					<th width="200">广告名称</th>
+					<th width="200">赞助商名称</th>
+					<th width="200">联系方式</th>
+					<th width="200">添加时间</th>
+					<th width="250">可用操作</th>
+				</tr>
+			</table>
+			<!-- 表体 -->
+			<table id="manage_table_body">
+				<tbody>
+					<tr  id="row-1">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+							
+						</td>
+						<td width="150" id="number-cell">1</td>
+						<td width="200">纯牛奶</td>
+						<td width="200">蒙牛</td>
+						<td width="200">17869548795</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit ad-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del ad-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					<tr id="row-2">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+						</td>
+						<td width="150" id="number-cell">2</td>
+						<td width="200">矿泉水</td>
+						<td width="200">脉动</td>
+						<td width="200">12336448795</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit ad-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del ad-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					<tr  id="row-3">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+						</td>
+						<td width="150" id="number-cell">3</td>
+						<td width="200">绝味鸭脖</td>
+						<td width="200">周鸭脖</td>
+						<td width="200">18869548795</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit ad-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del ad-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 运动员管理表格 -->
+		<div class="managebox main athlete-manage">
+			<img src="img/admin/admin-bg.png" alt="" id="bg_img">
+			<div class="managebox-top">
+				<div class="topbtn addbtn ath-addbtn">
+					<img src="img/admin/addbtn.svg" alt="" id="btnicon addbtn_icon">
+					<p>新增运动员</p>
+				</div>
+				<div class="topbtn delbtn ath-delbtn">
+					<img src="img/admin/delbtn.svg" alt="" id="btnicon delbtn_icon">
+					<p>删除运动员</p>
+				</div>
+			</div>
+			<!-- 删除询问模态框 -->
+			<div id="delete-confirm-dialog" title="确认删除？">
+				<p>这将永久删除该行数据。</p>
+			</div>
+			
+			<!-- 表头 -->
+			<table id="manage_table_head">
+				<tr>
+					<th width="40">
+						<input type="checkbox" class="charge_head select-all" id=" ath-select-all" name="agree" value="true">
+					</th>
+					<th width="150">运动员ID</th>
+					<th width="200">姓名</th>
+					<th width="200">国籍</th>
+					<th width="200">参赛项目</th>
+					<th width="200">添加时间</th>
+					<th width="250">可用操作</th>
+				</tr>
+			</table>
+			<!-- 表体 -->
+			<table id="manage_table_body">
+				<tbody>
+					
+					<tr id="row-1">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+						</td>
+						<td width="150" id="number-cell">2302</td>
+						<td width="200">卓定</td>
+						<td width="200">中国</td>
+						<td width="200">英雄联盟</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit ath-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del ath-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					<tr  id="row-2">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+							
+						</td>
+						<td width="150" id="number-cell">2301</td>
+						<td width="200">马龙</td>
+						<td width="200">中国</td>
+						<td width="200">乒乓球</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit ath-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del ath-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					<tr  id="row-3">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+						</td>
+						<td width="150" id="number-cell">2303</td>
+						<td width="200">全红婵</td>
+						<td width="200">中国</td>
+						<td width="200">2303</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit ath-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del ath-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 赛事管理表格 -->
+		<div class="managebox main event-manage">
+			<img src="img/admin/admin-bg.png" alt="" id="bg_img">
+			<div class="managebox-top">
+				<div class="topbtn addbtn eve-addbtn">
+					<img src="img/admin/addbtn.svg" alt="" id="btnicon addbtn_icon">
+					<p>新增赛事</p>
+				</div>
+				<div class="topbtn delbtn eve-delbtn">
+					<img src="img/admin/delbtn.svg" alt="" id="btnicon delbtn_icon">
+					<p>删除赛事</p>
+				</div>
+			</div>
+			<!-- 删除询问模态框 -->
+			<div id="delete-confirm-dialog" title="确认删除？">
+				<p>这将永久删除该行数据。</p>
+			</div>
+			
+			<!-- 表头 -->
+			<table id="manage_table_head">
+				<tr>
+					<th width="40">
+						<input type="checkbox" class="charge_head select-all" id="eve-select-all" name="agree" value="true">
+					</th>
+					<th width="150">项目ID</th>
+					<th width="200">项目大项</th>
+					<th width="200">项目名称</th>
+					<th width="200">运动员名单</th>
+					<th width="200">添加时间</th>
+					<th width="250">可用操作</th>
+				</tr>
+			</table>
+			<!-- 表体 -->
+			<table id="manage_table_body">
+				<tbody>
+					<tr  id="row-1">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+							
+						</td>
+						<td width="150" id="number-cell">1</td>
+						<td width="200">电子竞技</td>
+						<td width="200">英雄联盟</td>
+						<td width="200">查看</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit eve-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del eve-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					<tr id="row-2">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+						</td>
+						<td width="150" id="number-cell">2</td>
+						<td width="200">乒乓球</td>
+						<td width="200">男子单打乒乓球</td>
+						<td width="200">查看</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit eve-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del eve-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					<tr  id="row-3">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+						</td>
+						<td width="150" id="number-cell">3</td>
+						<td width="200">跳水</td>
+						<td width="200">女子单人跳水</td>
+						<td width="200">查看</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit eve-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del eve-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 赛程管理表格 -->
+		<div class="managebox main schedule-manage">
+			<img src="img/admin/admin-bg.png" alt="" id="bg_img">
+			<div class="managebox-top">
+				<div class="topbtn addbtn sche-addbtn">
+					<img src="img/admin/addbtn.svg" alt="" id="btnicon addbtn_icon">
+					<p>新增赛程</p>
+				</div>
+				<div class="topbtn delbtn sche-delbtn">
+					<img src="img/admin/delbtn.svg" alt="" id="btnicon delbtn_icon">
+					<p>删除赛程</p>
+				</div>
+			</div>
+			<!-- 删除询问模态框 -->
+			<div id="delete-confirm-dialog" title="确认删除？">
+				<p>这将永久删除该行数据。</p>
+			</div>
+			
+			<!-- 表头 -->
+			<table id="manage_table_head">
+				<tr>
+					<th width="40">
+						<input type="checkbox" class="charge_head select-all" id="sche-select-all" name="agree" value="true">
+					</th>
+					<th width="150">赛程ID</th>
+					<th width="200">项目名称</th>
+					<th width="200">比赛日期</th>
+					<th width="200">比赛结果</th>
+					<th width="200">添加时间</th>
+					<th width="250">可用操作</th>
+				</tr>
+			</table>
+			<!-- 表体 -->
+			<table id="manage_table_body">
+				<tbody>
+					<tr  id="row-1">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+							
+						</td>
+						<td width="150" id="number-cell">2301</td>
+						<td width="200">英雄联盟</td>
+						<td width="200">2023-10-1 18:00</td>
+						<td width="200">查看</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit sche-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del sche-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					<tr id="row-2">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+						</td>
+						<td width="150" id="number-cell">2302</td>
+						<td width="200">乒乓球</td>
+						<td width="200">2023-9-27 09:00</td>
+						<td width="200">查看</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit sche-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del sche-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					<tr  id="row-3">
+						<td width="40">
+							<input type="checkbox" class="charge" id="checkbox" name="agree" value="true">
+						</td>
+						<td width="150" id="number-cell">2303</td>
+						<td width="200">跳水</td>
+						<td width="200">2023-9-28 14:00</td>
+						<td width="200">查看</td>
+						<td width="200">2023-5-21 19:00</td>
+						<td width="250">
+							<div class="manage-aciton">
+								<div class="manage-btn manage_table_body-edit sche-edit">编辑</div>
+								<div class="manage-btn manage_table_body-del sche-del">删除</div>
+							</div>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 广告添加 -->
+		<div class="main addpage ad-addpage">
+			<h1 class="addtle">广告添加</h1>
+			<div class="addpagecont">
+				<div class="addpage-lt">
+					<img src="img/admin/mengniu.jpg" alt="" id="add_img">
+					<div class="addimgbtn">
+						<p>上传照片</p>
+						<img src="img/admin/upload.svg" alt="">
+					</div>
+				</div>
+				<div class="addpage-rt">
+					<div class="add_row">
+						<li class="add_row-lt">序号</li>
+						<input class="add_row-rt" type="text" value="" placeholder="1">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">广告名称</li>
+						<input class="add_row-rt" type="text" value="" placeholder="纯牛奶">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">赞助商名称</li>
+						<input class="add_row-rt" type="text" value="" placeholder="蒙牛">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">联系方式</li>
+						<input class="add_row-rt" type="text" value="" placeholder="16874895612">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">添加时间</li>
+						<input class="add_row-rt" type="text" value="" placeholder="2023-5-21 19:00">
+					</div>
+					<div class="add_row add_row_more">
+						<li class="add_row-lt">广告简介</li>
+						<textarea id="my-textarea" class="add_row-rt"> 
+						</textarea>
+						
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="save-ok">
+				<div class="save bottom-btn">
+					<p>保存</p>
+					<img src="img/admin/save.svg" alt="">
+				</div>
+				<div class="ok bottom-btn">
+					<p>发布</p>
+					<img src="img/admin/ok.svg" alt="">
+				</div>
+			</div>
+		</div>
+
+		<!-- 运动员添加 -->
+		<div class="main addpage ath-addpage">
+			<h1 class="addtle">运动员添加</h1>
+			<div class="addpagecont">
+				<div class="addpage-lt">
+					<!-- 添加一个文件上传表单 -->
+					<input type="file" id="add_img_input" style="display: none;">
+					<img src="img/admin/knight.jpg" alt="" id="add_img" class="ath_add_img">
+					<div class="addimgbtn ath-addimgbtn">
+						<p>上传照片</p>
+						<img src="img/admin/upload.svg" alt="">
+					</div>
+				</div>
+				<div class="addpage-rt">
+					<div class="add_row">
+						<li class="add_row-lt ">运动员ID</li>
+						<input class="add_row-rt" id="add_row-lt-1" type="text" value="" placeholder="2302">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt ">运动员姓名</li>
+						<input class="add_row-rt" id="add_row-lt-2" type="text" value="" placeholder="卓定">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">运动员国籍</li>
+						<input class="add_row-rt" id="add_row-lt-3" type="text" value="" placeholder="中国">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt ">参赛项目</li>
+						<input class="add_row-rt" id="add_row-lt-4" type="text" value="" placeholder="英雄联盟">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">添加时间</li>
+						<input class="add_row-rt" type="text" value="" placeholder="2023-5-21 19:00">
+					</div>
+					<div class="add_row add_row_more">
+						<li class="add_row-lt">运动员简介</li>
+						<textarea id="my-textarea" class="add_row-rt"> 
+						</textarea>
+						
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="save-ok">
+				<div class="save bottom-btn">
+					<p>保存</p>
+					<img src="img/admin/save.svg" alt="">
+				</div>
+				<div class="ok bottom-btn">
+					<p>发布</p>
+					<img src="img/admin/ok.svg" alt="">
+				</div>
+			</div>
+		</div>
+
+		<!-- 赛事添加 -->
+		<div class="main addpage eve-addpage">
+			<h1 class="addtle">赛事添加</h1>
+			<div class="addpagecont">
+				<div class="addpage-lt">
+					<img src="img/event_img/event4.jpg" alt="" id="add_img">
+					<div class="addimgbtn">
+						<p>上传照片</p>
+						<img src="img/admin/upload.svg" alt="">
+					</div>
+				</div>
+				<div class="addpage-rt">
+					<div class="add_row">
+						<li class="add_row-lt">项目ID</li>
+						<input class="add_row-rt" type="text" value="" placeholder="1">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">项目大项</li>
+						<input class="add_row-rt" type="text" value="" placeholder="电子竞技">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">项目名称</li>
+						<input class="add_row-rt" type="text" value="" placeholder="英雄联盟">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">运动员名单</li>
+						<input class="add_row-rt" type="text" value="" placeholder="无">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">添加时间</li>
+						<input class="add_row-rt" type="text" value="" placeholder="2023-5-21 19:00">
+					</div>
+					<div class="add_row add_row_more">
+						<li class="add_row-lt">项目简介</li>
+						<textarea id="my-textarea" class="add_row-rt"> 
+						</textarea>
+						
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="save-ok">
+				<div class="save bottom-btn">
+					<p>保存</p>
+					<img src="img/admin/save.svg" alt="">
+				</div>
+				<div class="ok bottom-btn">
+					<p>发布</p>
+					<img src="img/admin/ok.svg" alt="">
+				</div>
+			</div>
+		</div>
+
+		<!-- 赛程添加 -->
+		<div class="main addpage sche-addpage">
+			<h1 class="addtle">赛程添加</h1>
+			<div class="addpagecont">
+				<div class="addpage-lt">
+					<img src="img/event_game/bg.jpeg" alt="" id="add_img">
+					
+				</div>
+				<div class="addpage-rt">
+					<div class="add_row">
+						<li class="add_row-lt">赛程ID</li>
+						<input class="add_row-rt" type="text" value="" placeholder="2301">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">项目名称</li>
+						<input class="add_row-rt" type="text" value="" placeholder="英雄联盟">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">比赛日期</li>
+						<input class="add_row-rt" type="text" value="" placeholder="2023-10-1 19:00">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">比赛结果</li>
+						<input class="add_row-rt" type="text" value="" placeholder="无">
+					</div>
+					<div class="add_row">
+						<li class="add_row-lt">添加时间</li>
+						<input class="add_row-rt" type="text" value="" placeholder="2023-5-21 19:00">
+					</div>
+					<div class="add_row add_row_more">
+						<li class="add_row-lt">赛程说明</li>
+						<textarea id="my-textarea" class="add_row-rt"> 
+						</textarea>
+						
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="save-ok">
+				<div class="save bottom-btn">
+					<p>保存</p>
+					<img src="img/admin/save.svg" alt="">
+				</div>
+				<div class="ok bottom-btn">
+					<p>发布</p>
+					<img src="img/admin/ok.svg" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<img src="img/event_img/banner1.jpg" alt="">
+		</div>
+		
+	</body>
+</html>

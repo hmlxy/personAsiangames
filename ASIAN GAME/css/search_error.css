@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2023-05-04 18:20:22
+ * @version $Id$
+ */
+
+
+/*导航栏*/
+
+.topnav {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 84px;
+    font-size: 24px;
+    background-color: white;
+    transition: top 0.3s ease-in-out;
+}
+
+
+.asian_icon {
+    height: 70px;
+    padding: 0;
+}
+
+.topnav-item {
+    color: grey;
+    transition: border-radius 2s,
+    background-color 1s;
+    cursor: pointer;
+    
+}
+
+.topnav-item:hover {
+    color: white;
+    border-radius: 20px;
+    background-color: #3E4ECA;
+}
+
+.topnav-item a {
+    color: grey ;
+
+}
+
+.topnav-item a:hover {
+    color: white ;
+}
+
+.topnav input[type="text"] {
+  border: 2px solid #ddd;
+  color:grey;
+  height: 40px;
+  width: 200px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#search_btn {
+    cursor: pointer;
+}
+
+
+.error_help {
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.bg-txt {
+    font-size: 72px;
+}
+
+#video {
+    margin: 20px 0;
+    height: 780px;
+    width: 100%;
+}
+

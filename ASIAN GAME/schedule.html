@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>杭州亚运会赛程</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- 引入bootstrap -->
+		<link href="css/common/bootstrap5.3.min.css"rel="stylesheet"/>
+		<link href="css/common/bootstrap5.3.docs.css" rel="stylesheet"/>
+		<!-- 引入resetcss -->
+		<link rel="stylesheet" href="css/common/Normalize.css">
+		<!-- 引入页面css -->
+		<link rel="stylesheet" href="css/schedule.css">
+
+		<!-- 引入jQuery -->
+		<script type="text/javascript" src="src/js/common/jquery3.6.min.js"></script>
+
+		<!-- 引入页面js -->
+		<script src="src/js/schedule.js"></script>
+
+
+		<!-- 引入swiper轮播图 -->
+		<link rel="stylesheet" href="css/common/swiper9.3.min.css" />
+		<script src="src/js/common/swiper9.3.min.js"></script>
+		<link rel="stylesheet" href="css/common/swiper.css">
+
+		<!-- 引入jQuery排序插件 -->
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+</head>
+<body>
+
+	
+
+
+	<!-- 头部菜单栏 -->
+	<div class="container-fluid topnav text-center">
+		<div class="row align-items-center">
+
+				
+				<div class="col-3">
+					<a  href="index.html">
+						<img src="img/head_logo.png " class="asian_icon" alt="">
+					</a>
+					
+				</div>
+				<div class="col-1"></div>
+
+				<div class="col-1">
+					<div class="topnav-evenbtn topnav-item">
+						<a  href="event.html">赛事</a>
+					</div>
+					
+				</div>
+
+				<div class="col-1">
+					<div class="topnav-schedulebtn topnav-item">
+						<a  href="#f">赛程</a>
+					</div>
+				</div>
+				
+
+
+				<div class="col-1">
+					<div class="topnav-adminbtn topnav-item">
+						<a  href="aboutus.html">aboutUS</a>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="row searchbtn ">
+						<div class="col-2"></div>
+						<div class="col-2">
+							<img src="img/btn_search.png" alt="" id="search_btn">
+						</div>
+						<div class="col-3 ">
+							<input  type="text" name="evenserch" id="evenserch" value="电子竞技" placeholder="请输入项目名称">
+						</div>
+						<div class="col-5"></div>
+						
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="aboutUS topnav-item">
+						<a id="admin">杭州亚运会欢迎您</a>
+					</div>
+				</div>	
+		</div>
+	</div>
+
+	<!-- banner -->
+	<div class="banner">
+		<img src="img/event_img/banner1.jpg" alt="" class="banner1_img">
+	</div>
+
+
+
+	<!-- 全部赛程表 -->
+	<main class="main " >
+			<div class="event_schedule_and_medal">
+			<div class="event_schedule">
+			
+				<h1>杭州亚运会全部赛程</h1>
+				
+				<!-- 三种筛选方式 -->
+				<div class="schedule_serch">
+					
+					<div class="range_time">
+						<div class="serch_circle" >
+							<select name id="selectbox" class="select_time">
+							<option value>选择比赛日期</option>
+							<option value="20230721">7月21日</option>
+							<option value="20230722">7月22日</option>
+							<option value="20230723">7月23日</option>
+						</select>
+						<li class="serch_btn" id="range_time">
+							<p>查询</p>
+						</li>
+							
+						</div>
+					</div>
+
+					<div class="range_event ">
+						<div class="serch_circle">
+								<select name id="selectbox" class="select_event">
+								<option value>选择比赛项目</option>
+								<option value="电子竞技">电子竞技</option>								
+								<option value="乒乓球">乒乓球</option>								
+								<option value="跳水">跳水</option>
+							</select>
+							<li class="serch_btn" id="range_event">
+								<p>查询</p>
+							</li>
+							
+						</div>	
+					</div>
+
+				
+
+					<div class="range_temp ">
+						<div class="serch_circle">
+							<select name id="selectbox" class="select_sportshall">
+								<option value>选择比赛场馆</option>
+								<option value="中国杭州电竞中心">中国杭州电竞中心</option>
+								<option value="杭州奥体中心体育馆">杭州奥体中心体育馆</option>						
+								<option value="杭州奥体中心游泳馆">杭州奥体中心游泳馆</option>
+
+							</select>
+							<li class="serch_btn" id="range_temp">
+								<p>查询</p>
+							</li>
+							
+						</div>
+					</div>
+				</div>
+
+
+				<div class="event_schedule_table">
+					<!-- 时间 -->
+					<div class="swiper-event-box">
+						<div class="swiper-container" id="swiper-event-top">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="datelist2 date">
+									<li id="date2" class="datebtn">11
+										<br>
+										周三
+									</li>
+									<li id="date2" class="datebtn">12
+										<br>
+										周四
+									</li>
+									<li id="date2" class="datebtn">13
+										<br>
+										周五
+									</li>
+									<li id="date2" class="datebtn">14
+										<br>
+										周六
+									</li>
+									<li id="date2" class="datebtn">15
+										<br>
+										周日
+									</li>
+									<li id="date2" class="datebtn">16
+										<br>
+										周一
+									</li>
+									<li id="date2" class="datebtn">17
+										<br>
+										周二
+									</li>
+									<li id="date2" class="datebtn">18
+										<br>
+										周三
+									</li >
+									<li id="date2" class="datebtn">19
+										<br>
+										周四
+									</li>
+									<li id="date2" class="datebtn">20
+										<br>
+										周五
+									</li>
+									<li id="date2" class="datebtn">21
+										<br>
+										周六
+									</li>
+									<li id="date2" class="datebtn">22
+										<br>
+										周日
+									</li>
+									<li id="date2" class="datebtn">23
+										<br>
+										周一
+									</li>
+									<li id="date2" class="datebtn">24
+										<br>
+										周二
+									</li>
+									<li id="date2" class="datebtn">25
+										<br>
+										周三
+									</li>						
+								</div>	
+							</div>
+							
+							<div class="swiper-slide">
+								<div class="datelist1 date">
+									<li id="date1" class="datebtn">26
+										<br>
+										周三
+									</li>
+									<li id="date1" class="datebtn">27
+										<br>
+										周四
+									</li>
+									<li id="date1" class="datebtn">28
+										<br>
+										周五
+									</li>
+									<li id="date1" class="datebtn">29
+										<br>
+										周六
+									</li>
+									<li id="date1" class="datebtn">30
+										<br>
+										周日
+									</li>
+									<li id="date1" class="datebtn">30
+										<br>
+										周一
+									</li>
+									<li id="date1" class="datebtn">1
+										<br>
+										周二
+									</li>
+									<li id="date1" class="datebtn">2
+										<br>
+										周三
+									</li >
+									<li id="date1" class="datebtn">3
+										<br>
+										周四
+									</li>
+									<li id="date1" class="datebtn">4
+										<br>
+										周五
+									</li>
+									<li id="date1" class="datebtn">5
+										<br>
+										周六
+									</li>
+									<li id="date1" class="datebtn">6
+										<br>
+										周日
+									</li>
+									<li id="date1" class="datebtn">7
+										<br>
+										周一
+									</li>
+									<li id="date1" class="datebtn">8
+										<br>
+										周二
+									</li>
+									<li id="date1" class="datebtn">9
+										<br>
+										周三
+									</li>						
+								</div>	
+							</div>
+
+						</div>
+						
+						<div class="swiper-button-prev" id="swiper-event-prev"></div>
+						<div class="swiper-button-next" id="swiper-event-next"></div>
+	
+						</div>
+					</div>	
+			
+					<div class="day" id="day">
+						<!-- 表头 -->
+						<table cellspacing="0" cellpadding="0" width="100%">
+							<thead>
+								<tr>
+									<th width="100">时间</th>
+									<th width="119">大项</th>
+									<th width="198">比赛</th>
+									<th width="118">场馆</th>
+									<th width="89">比赛状态</th>
+									<th width="122">数据</th>	
+								</tr>
+							</thead>
+						</table>
+
+						<!-- 项目赛程 -->
+						<div class="scrollbar_schedule">
+							<table cellspacing="0" cellpadding="0" width="100%" id="table-time">
+								<tbody id="event_list">
+									<tr>
+										<td width="100">7月21日 09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟 中国 VS 韩国</td>
+										<td width="120">杭州电竞中心</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">7月21日 09:00</td>
+										<td width="120">跳水</td>
+										<td width="200">女子单人跳水16强</td>
+										<td width="120">杭州奥体中心游泳馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">7月21日 09:00</td>
+										<td width="120">乒乓球</td>
+										<td width="200">男子单打 中国VS日本</td>
+										<td width="120">杭州奥体中心体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">7月21日 09:00</td>
+										<td width="120">乒乓球</td>
+										<td width="200">女子单打 中国VS日本</td>
+										<td width="120">杭州奥体中心体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td width="100">7月22日 09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟 中国 VS 韩国</td>
+										<td width="120">杭州电竞中心</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">7月22日 09:00</td>
+										<td width="120">跳水</td>
+										<td width="200">女子单人跳水16强</td>
+										<td width="120">杭州奥体中心游泳馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">7月22日 09:00</td>
+										<td width="120">乒乓球</td>
+										<td width="200">男子单打 中国VS日本</td>
+										<td width="120">杭州奥体中心体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">7月22日 09:00</td>
+										<td width="120">乒乓球</td>
+										<td width="200">女子单打 中国VS日本</td>
+										<td width="120">杭州奥体中心体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td width="100">7月23日 09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟 中国 VS 韩国</td>
+										<td width="120">杭州电竞中心</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">7月23日 09:00</td>
+										<td width="120">跳水</td>
+										<td width="200">女子单人跳水16强</td>
+										<td width="120">杭州奥体中心游泳馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">7月23日 09:00</td>
+										<td width="120">乒乓球</td>
+										<td width="200">男子单打 中国VS日本</td>
+										<td width="120">杭州奥体中心体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">7月23日 09:00</td>
+										<td width="120">乒乓球</td>
+										<td width="200">女子单打 中国VS日本</td>
+										<td width="120">杭州奥体中心体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									
+									
+								</tbody>								
+							</table>
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>		
+	</main>
+
+
+	
+
+
+
+
+		
+</body>
+</html>

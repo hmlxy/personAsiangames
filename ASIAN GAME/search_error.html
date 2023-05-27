@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>杭州亚运会系统错误页面</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<!-- 屏幕适配 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- 引入bootstrap -->
+		 <link href="css/common/bootstrap5.3.min.css"rel="stylesheet"/>
+		<link href="css/common/bootstrap5.3.docs.css" rel="stylesheet"/>
+ 		
+		<!-- 引入resetcss -->
+		<link rel="stylesheet" href="css/common/Normalize.css">
+
+		<!-- 引入页面css -->
+		<link href="css/search_error.css" rel="stylesheet">
+
+		<!-- 引入swiper轮播图 -->
+		<!-- <link rel="stylesheet" href="css/common/swiper9.3.min.css" />
+		<script src="src/js/common/swiper9.3.min.js"></script>
+		<link rel="stylesheet" href="css/common/swiper.css"> -->
+
+		<!-- 引入jQuery -->
+		<script type="text/javascript" src="src/js/common/jquery3.6.min.js"></script>
+		<!-- 引入界面js -->
+		<script src="src/js/search_error.js"></script>
+
+	</head>
+	<body>
+
+
+		<!-- 头部菜单栏 -->
+		<div class="container-fluid topnav text-center">
+			<div class="row align-items-center">
+				<div class="col-3">
+					<a  href="index.html">
+						<img src="img/head_logo.png " class="asian_icon" alt="">
+					</a>
+				</div>
+				<div class="col-1"></div>
+				<div class="col-1">
+					<div class="topnav-evenbtn topnav-item">
+						<a  href="event.html">赛事</a>
+					</div>
+					
+				</div>
+				<div class="col-1">
+					<div class="topnav-schedulebtn topnav-item">
+						<a  href="schedule.html">赛程</a>
+					</div>
+				</div>
+			
+				<div class="col-1">
+					<div class="topnav-adminbtn topnav-item">
+						<a href="aboutus.html">aboutUS</a>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="row searchbtn ">
+						<div class="col-2"></div>
+						<div class="col-2">
+							<img src="img/btn_search.png" alt="" id="search_btn">
+						</div>
+						<div class="col-3 ">
+							<input  type="text" name="evenserch" id="evenserch" value="电子竞技" placeholder="请输入项目名称">
+						</div>
+						<div class="col-5"></div>
+						
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="aboutUS topnav-item">
+						<a id="admin">杭州亚运会欢迎您</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="error_help">
+			<h1 class="bg-txt">Error页面</h1>
+			<h1>请输入正确的项目名称</h1>
+			<p class="item item5">视频为中国英雄联盟夺冠元年宣传片</p>
+		</div>
+
+		<video id="video" src="img/event_game/lol.mp4" controls  muted >
+		</video>
+		
+
+	</body>
+</html>

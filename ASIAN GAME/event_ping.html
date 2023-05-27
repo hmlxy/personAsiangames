@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>赛事详情</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- 引入bootstrap -->
+		<link href="css/common/bootstrap5.3.min.css"rel="stylesheet"/>
+		<link href="css/common/bootstrap5.3.docs.css" rel="stylesheet"/>
+		<!-- 引入resetcss -->
+		<link rel="stylesheet" href="css/common/Normalize.css">
+		<!-- 引入页面css -->
+		<link rel="stylesheet" href="css/event_game.css">
+
+		<!-- 引入jQuery -->
+		<script type="text/javascript" src="src/js/common/jquery3.6.min.js"></script>
+
+		<!-- 引入页面js -->
+		<script src="src/js/event_game.js"></script>
+
+
+		<!-- 引入swiper轮播图 -->
+		<link rel="stylesheet" href="css/common/swiper9.3.min.css" />
+		<script src="src/js/common/swiper9.3.min.js"></script>
+
+		<link rel="stylesheet" href="css/common/swiper.css">
+
+</head>
+<body>
+
+	
+
+	<!-- 头部菜单栏 -->
+	<div class="container-fluid topnav text-center">
+		<div class="row align-items-center">
+
+				<div class="col-3">
+					<a  href="index.html">
+						<img src="img/head_logo.png " class="asian_icon" alt="">
+					</a>
+				</div>
+				<div class="col-1"></div>
+
+				<div class="col-1">
+					<div class="topnav-evenbtn topnav-item">
+						<a  href="event.html">赛事</a>
+					</div>
+					
+				</div>
+
+				<div class="col-1">
+					<div class="topnav-schedulebtn topnav-item">
+						<a  href="schedule.html">赛程</a>
+					</div>
+				</div>
+				
+
+			
+
+				<div class="col-1">
+					<div class="topnav-adminbtn topnav-item">
+						<a  href="aboutus.html">aboutUS</a>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="row searchbtn ">
+						<div class="col-2"></div>
+						<div class="col-2">
+							<a href="event_game.html">
+								<img src="img/btn_search.png" alt="" id="search_btn">
+							</a>
+						</div>
+						<div class="col-3 ">
+							<input  type="text" name="evenserch" id="evenserch" value="电子竞技" placeholder="请输入项目名称">
+						</div>
+						<div class="col-5"></div>
+						
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="aboutUS topnav-item">
+						<a id="admin">杭州亚运会欢迎您</a>
+					</div>
+				</div>	
+		</div>
+	</div>
+
+
+
+	<main class="main" >
+		<div class="event_tle">
+			<p>杭州亚运会项目-乒乓球</p>
+		</div>
+
+		<!-- 项目介绍 -->
+		<div class="event_intro">
+			<!-- 介绍的左边 -->
+			<div class="intro_lt">
+				<h1>乒乓球</h1>
+				<div class="intro_cnt">
+					<li class="intro_img">
+						<img src="img/event_img/event9.jpg" alt="">
+					</li>
+					<li class="intro_txt">
+						<p>乒乓球起源于英国，“乒乓球”一名起源自1900年，因其打击时发出“Ping Pong”的声音而得名。在中国大陆以“乒乓球”作为它的官方名称，中国香港及澳门等地区亦同。1926年1月，在德国柏林举行了一次国际乒乓球赛，共有9个国家的64名男运动员参加了比赛。同年12月，国际乒乓球联合会正式成立，并把在伦敦举行的欧洲锦标赛命名为第一届世界乒乓球锦标赛。</p>
+						<div class="intro_more">
+							<a href="#">更多 &gt</a>
+						</div>
+					</li>
+
+				</div>
+			</div>
+			<!-- 项目选择轮播 -->
+			<div class="intro_rt">
+				<h1>亚运项目</h1>
+				<div class="swiper-event-box">
+					<div class="swiper-container" id="swiper-event-top">
+						<div class="swiper-wrapper" id="swiper-slide-event-box">
+							<div class="swiper-slide">
+								<div class="event_select">
+									<li>
+										<a href="#"><img src="img/event_img/event1.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/event_img/event2.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/event_img/event3.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/event_img/event5.jpg" alt=""></a>
+									</li>
+									
+								</div>
+
+								<div class="event_select">
+									<li>
+										<a href="#"><img src="img/event_img/event6.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/event_img/event7.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/event_img/event8.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#">	
+										<img src="img/event_img/event9.jpg" alt=""></a>
+									</li>
+								</div>	
+							</div>
+
+							<div class="swiper-slide">
+								<div class="event_select">
+									<li>
+										<a href="#"><img src="img/event_img/event1.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/event_img/event2.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/event_img/event3.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/event_img/event5.jpg" alt=""></a>
+									</li>
+									
+								</div>
+
+								<div class="event_select">
+									<li>
+										<a href="#"><img src="img/event_img/event6.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/event_img/event7.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/event_img/event8.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#">	
+										<img src="img/event_img/event9.jpg" alt=""></a>
+									</li>
+								</div>	
+							</div>
+				
+						</div>
+						<div class="swiper-pagination" id="pagination-event-top"></div>
+						<div class="swiper-button-prev" id="swiper-event-prev"></div>
+						<div class="swiper-button-next" id="swiper-event-next"></div>
+	
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<!-- 项目奖牌 -->
+		<div class="event_medal">
+			<div class="event_total_medal">
+				<h1>项目奖牌榜</h1>
+				<div class="total_medal_schedule">
+					<table cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<th width="80">名次</th>
+								<th width="180">国家/地区</th>
+								<th width="80">金</th>
+								<th width="80">银</th>
+								<th width="80">铜</th>
+								<th width="82">总数</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="scrollbar1">
+						<table cellspacing="0" cellpadding="0">
+							<tbody>
+								<tr>
+									<th width="80">1</th>
+									<th width="180">中国</th>
+									<th width="80">12</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">17</th>
+								</tr>
+								<tr>
+									<th width="80">2</th>
+									<th width="180">美国</th>
+									<th width="80">10</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">15</th>
+								</tr>
+								<tr>
+									<th width="80">2</th>
+									<th width="180">美国</th>
+									<th width="80">10</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">15</th>
+								</tr>
+								<tr>
+									<th width="80">1</th>
+									<th width="180">中国</th>
+									<th width="80">12</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">17</th>
+								</tr>
+								<tr>
+									<th width="80">2</th>
+									<th width="180">美国</th>
+									<th width="80">10</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">15</th>
+								</tr>
+								<tr>
+									<th width="80">2</th>
+									<th width="180">美国</th>
+									<th width="80">10</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">15</th>
+								</tr>
+								<tr>
+									<th width="80">1</th>
+									<th width="180">中国</th>
+									<th width="80">12</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">17</th>
+								</tr>
+								<tr>
+									<th width="80">2</th>
+									<th width="180">美国</th>
+									<th width="80">10</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">15</th>
+								</tr>
+								<tr>
+									<th width="80">2</th>
+									<th width="180">美国</th>
+									<th width="80">10</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">15</th>
+								</tr>
+								<tr>
+									<th width="80">1</th>
+									<th width="180">中国</th>
+									<th width="80">12</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">17</th>
+								</tr>
+								<tr>
+									<th width="80">2</th>
+									<th width="180">美国</th>
+									<th width="80">10</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">15</th>
+								</tr>
+								<tr>
+									<th width="80">2</th>
+									<th width="180">美国</th>
+									<th width="80">10</th>
+									<th width="80">4</th>
+									<th width="80">1</th>
+									<th width="80">15</th>
+								</tr>
+							</tbody>
+						</table>
+						
+					</div>
+					
+				</div>
+			</div>
+			<div class="event_detail_medal">
+				<h1>项目奖牌榜</h1>
+				<div class="total_medal_schedule">
+					<table cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<th width="80">日期</th>
+								<th width="80">时间</th>
+								<th width="180">项目名称</th>
+								<th width="80">金</th>
+								<th width="80">银</th>
+								<th width="82">铜</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="scrollbar1">
+						<table cellspacing="0" cellpadding="0">
+							<tbody>
+								<tr>
+									<th width="80">7-30</th>
+									<th width="80">20:00</th>
+									<th width="180">英雄联盟</th>
+									<th width="80">JDG</th>
+									<th width="80">BLG</th>
+									<th width="82">WBG</th>
+								</tr>
+								<tr>
+									<th width="80">7-30</th>
+									<th width="80">20:00</th>
+									<th width="180">王者荣耀</th>
+									<th width="80">JDG</th>
+									<th width="80">BLG</th>
+									<th width="82">WBG</th>
+								</tr>
+								<tr>
+									<th width="80">7-30</th>
+									<th width="80">20:00</th>
+									<th width="180">英雄联盟</th>
+									<th width="80">JDG</th>
+									<th width="80">BLG</th>
+									<th width="82">WBG</th>
+								</tr>
+								<tr>
+									<th width="80">7-30</th>
+									<th width="80">20:00</th>
+									<th width="180">王者荣耀</th>
+									<th width="80">JDG</th>
+									<th width="80">BLG</th>
+									<th width="82">WBG</th>
+								</tr>
+								<tr>
+									<th width="80">7-30</th>
+									<th width="80">20:00</th>
+									<th width="180">英雄联盟</th>
+									<th width="80">JDG</th>
+									<th width="80">BLG</th>
+									<th width="82">WBG</th>
+								</tr>
+								<tr>
+									<th width="80">7-30</th>
+									<th width="80">20:00</th>
+									<th width="180">王者荣耀</th>
+									<th width="80">JDG</th>
+									<th width="80">BLG</th>
+									<th width="82">WBG</th>
+								</tr>
+								<tr>
+									<th width="80">7-30</th>
+									<th width="80">20:00</th>
+									<th width="180">英雄联盟</th>
+									<th width="80">JDG</th>
+									<th width="80">BLG</th>
+									<th width="82">WBG</th>
+								</tr>
+								<tr>
+									<th width="80">7-30</th>
+									<th width="80">20:00</th>
+									<th width="180">王者荣耀</th>
+									<th width="80">JDG</th>
+									<th width="80">BLG</th>
+									<th width="82">WBG</th>
+								</tr>
+								<tr>
+									<th width="80">7-30</th>
+									<th width="80">20:00</th>
+									<th width="180">英雄联盟</th>
+									<th width="80">JDG</th>
+									<th width="80">BLG</th>
+									<th width="82">WBG</th>
+								</tr>
+								<tr>
+									<th width="80">7-30</th>
+									<th width="80">20:00</th>
+									<th width="180">王者荣耀</th>
+									<th width="80">JDG</th>
+									<th width="80">BLG</th>
+									<th width="82">WBG</th>
+								</tr>
+								
+							</tbody>
+						</table>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>	
+
+		<!-- 项目赛程 -->
+		<div class="event_schedule_and_medal">
+			<div class="event_schedule">
+				<h1>项目赛程</h1>
+				<div class="event_schedule_table">
+					<!-- 时间 -->
+					<!-- 时间 -->
+					<div class="swiper-event-schedule">
+						<div class="swiper-container" id="swiper-event-bottom">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="date">
+									<li id="date2" class="datebtn">11
+										<br>
+										周三
+									</li>
+									<li id="date2" class="datebtn">12
+										<br>
+										周四
+									</li>
+									<li id="date2" class="datebtn">13
+										<br>
+										周五
+									</li>
+									<li id="date2" class="datebtn">14
+										<br>
+										周六
+									</li>
+									<li id="date2" class="datebtn">15
+										<br>
+										周日
+									</li>
+									<li id="date2" class="datebtn">16
+										<br>
+										周一
+									</li>
+									<li id="date2" class="datebtn">17
+										<br>
+										周二
+									</li>
+									<li id="date2" class="datebtn">18
+										<br>
+										周三
+									</li >
+									<li id="date2" class="datebtn">19
+										<br>
+										周四
+									</li>
+									<li id="date2" class="datebtn">20
+										<br>
+										周五
+									</li>
+									<li id="date2" class="datebtn">21
+										<br>
+										周六
+									</li>
+									<li id="date2" class="datebtn">22
+										<br>
+										周日
+									</li>
+									<li id="date2" class="datebtn">23
+										<br>
+										周一
+									</li>
+									<li id="date2" class="datebtn">24
+										<br>
+										周二
+									</li>
+									<li id="date2" class="datebtn">25
+										<br>
+										周三
+									</li>						
+								</div>	
+							</div>
+							
+							<div class="swiper-slide">
+								<div class="date">
+									<li id="date1" class="datebtn">26
+										<br>
+										周三
+									</li>
+									<li id="date1" class="datebtn">27
+										<br>
+										周四
+									</li>
+									<li id="date1" class="datebtn">28
+										<br>
+										周五
+									</li>
+									<li id="date1" class="datebtn">29
+										<br>
+										周六
+									</li>
+									<li id="date1" class="datebtn">30
+										<br>
+										周日
+									</li>
+									<li id="date1" class="datebtn">30
+										<br>
+										周一
+									</li>
+									<li id="date1" class="datebtn">1
+										<br>
+										周二
+									</li>
+									<li id="date1" class="datebtn">2
+										<br>
+										周三
+									</li >
+									<li id="date1" class="datebtn">3
+										<br>
+										周四
+									</li>
+									<li id="date1" class="datebtn">4
+										<br>
+										周五
+									</li>
+									<li id="date1" class="datebtn">5
+										<br>
+										周六
+									</li>
+									<li id="date1" class="datebtn">6
+										<br>
+										周日
+									</li>
+									<li id="date1" class="datebtn">7
+										<br>
+										周一
+									</li>
+									<li id="date1" class="datebtn">8
+										<br>
+										周二
+									</li>
+									<li id="date1" class="datebtn">9
+										<br>
+										周三
+									</li>						
+								</div>	
+							</div>
+
+						</div>
+						
+						<div class="swiper-button-prev" id="swiper-schedule-prev"></div>
+						<div class="swiper-button-next" id="swiper-schedule-next"></div>
+	
+						</div>
+					</div>
+					<div class="day">
+						<!-- 表头 -->
+						<table cellspacing="0" cellpadding="0" width="100%">
+							<thead>
+								<tr>
+									<th width="100">时间</th>
+									<th width="119">大项</th>
+									<th width="198">比赛</th>
+									<th width="118">场馆</th>
+									<th width="89">比赛状态</th>
+									<th width="122">数据</th>	
+								</tr>
+							</thead>
+						</table>
+
+						<!-- 项目赛程 -->
+						<div class="scrollbar_schedule">
+							<table cellspacing="0" cellpadding="0" width="100%">
+								<tbody id="event_list">
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="100">26日09:00</td>
+										<td width="120">电子竞技</td>
+										<td width="200">英雄联盟第1轮 JDG VS T1</td>
+										<td width="120">杭州电子竞技体育馆</td>
+										<td width="90">未开始</td>
+										<td width="120">
+											<a target="_blank" href="#">成绩公报</a>
+										</td>
+									</tr>
+								</tbody>								
+							</table>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- 底部视频 -->
+	<div class="container-fluid  text-center">
+		<div class="row banner_video">
+		
+			<video src="img/event_game/lol.mp4"controls muted>
+			</video>
+		</div>
+	</div>
+    
+</body>
+</html>
